@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Linq
 {
@@ -8,6 +9,11 @@ namespace Linq
         static void Main(string[] args)
         {
             var persons = GetPersons();
+            var numbersArray = Enumerable.Range(1, 10).ToArray();
+            var numbersList = Enumerable.Range(1, 10).ToList();
+
+
+
         }
 
         private static IEnumerable<Person> GetPersons()
