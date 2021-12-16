@@ -10,7 +10,11 @@ namespace Linq
     {
         internal static void IntExt(this int x) => Console.WriteLine(x);
 
-        internal static string Add(this string str, string newWord) => str + " " + newWord; 
-        
+        internal static string Add(this string str, string newWord) => str + " " + newWord;
+
+        public static string Add(this string str, params string[] words)
+        {
+            return $"{str} {String.Join(" ", words)}";
+        }
     }
 }

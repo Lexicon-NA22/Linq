@@ -12,7 +12,12 @@ namespace Linq
             var numbersArray = Enumerable.Range(1, 10).ToArray();
             var numbersList = Enumerable.Range(1, 10).ToList();
 
+            var str = "Hej";
+            var hejDå = str.Add("Då");
+            var manyWords = str.Add("Då", "Vi", "Ses", "Imorgon");
 
+            Console.WriteLine(hejDå);
+            Console.WriteLine(manyWords);
 
         }
 
