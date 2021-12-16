@@ -16,5 +16,16 @@ namespace Linq
         {
             return $"{str} {String.Join(" ", words)}";
         }
+
+        public static IEnumerable<T> ReturnIfTrue<T>(this IEnumerable<T> source, Func<T, bool> predicate)
+        {
+            if(source == null) throw new ArgumentNullException(nameof(source));
+            if(predicate == null) throw new ArgumentNullException(nameof(predicate));
+
+            foreach (var item in source)
+            {
+                if(predicate(item)) yield return item;
+            }
+        }
     }
 }
